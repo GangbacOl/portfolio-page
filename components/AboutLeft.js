@@ -14,7 +14,14 @@ export default function AboutLeft() {
 }
 
 const Container = styled.div`
-    width: 50%;
+    width: 40%;
+    margin-right: 50px;
 `;
-const Title = styled.h2``;
-const Paragraph = styled.p``;
+const Title = styled.h2`
+    font-size: 5rem;
+    border-bottom: 3px solid black;
+    margin: 0;
+`;
+const Paragraph = styled.p`
+    font-size: 1.2rem;
+`;
