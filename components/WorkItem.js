@@ -38,6 +38,9 @@ const Container = styled.div`
                 opacity: 1;
             }
         }
+        -webkit-box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.75);
+        box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.75);
     }
 `;
 
