@@ -17,10 +17,26 @@ const Container = styled.div`
     margin: 30px 0;
 `;
 const Navigation = styled.div`
-    width: 70%;
-    margin: 0 auto;
-    border: 1px solid black;
+    width: 60%;
+    max-width: 950px;
+    height: 60px;
     display: flex;
+    justify-content: space-around;
+    align-items: center;
     list-style: none;
+    margin: 0 auto;
+    border: 4px solid #333030;
 `;
-const NavList = styled.li``;
+const NavList = styled.li`
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: all 0.3s;
+    font-weight: bold;
+    &:hover {
+        background-color: #333030;
+        color: white;
+    }
+`;

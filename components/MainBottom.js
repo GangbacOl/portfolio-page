@@ -19,6 +19,10 @@ const Container = styled.div`
     align-items: center;
     margin-bottom: 60px;
 `;
-const Message = styled.p``;
+const Message = styled.p`
+    letter-spacing: 5px;
+    font-size: 1.1rem;
+    color: rgba(0, 0, 0, 0.4);
+`;
 const DownArrowWrap = styled.div``;
 const DownArrowImage = styled(Image)``;
