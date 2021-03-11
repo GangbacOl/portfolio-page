@@ -10,6 +10,24 @@ const personalWork = [
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, nesciunt! Itaque illum debitis officiis magni veritatis deserunt in expedita optio nulla tenetur aliquam, voluptate doloribus eius quae impedit laudantium corrupti!',
         imagePath: '/images/rccar.jpg',
     },
+    {
+        name: 'Todar Book',
+        description:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur facilis distinctio, consequuntur voluptatibus eius fugiat a voluptate eveniet numquam. Iusto cum porro asperiores facere voluptatum assumenda temporibus tempore accusamus minus?',
+        imagePath: '/images/todarbook.png',
+    },
+    {
+        name: 'Real Word',
+        description:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur facilis distinctio, consequuntur voluptatibus eius fugiat a voluptate eveniet numquam. Iusto cum porro asperiores facere voluptatum assumenda temporibus tempore accusamus minus?',
+        imagePath: '/images/realword.png',
+    },
+    {
+        name: '포트폴리오 페이지',
+        description:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur facilis distinctio, consequuntur voluptatibus eius fugiat a voluptate eveniet numquam. Iusto cum porro asperiores facere voluptatum assumenda temporibus tempore accusamus minus?',
+        imagePath: '/images/portfoliopage.png',
+    },
 ];
 const teamWork = [
     {
