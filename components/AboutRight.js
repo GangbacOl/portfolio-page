@@ -11,7 +11,7 @@ export default function AboutRight() {
 
 const Container = styled.div`
     position: relative;
-    width: 40%;
-    height: 80%;
+    width: 450px;
+    height: 600px;
 `;
 const AboutImage = styled(Image)``;

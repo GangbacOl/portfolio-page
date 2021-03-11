@@ -62,11 +62,32 @@ const TechSkillData = [
 export default function TechList() {
     return (
         <Container>
-            {TechSkillData.map((item) => (
-                <TechItem name={item.name} description={item.description} percentage={item.percentage} />
-            ))}
+            <TechItemsWrap>
+                {TechSkillData.map((item, idx) => (
+                    <TechItem
+                        name={item.name}
+                        description={item.description}
+                        percentage={item.percentage}
+                        key={idx}
+                    />
+                ))}
+            </TechItemsWrap>
         </Container>
     );
 }
 
-const Container = styled.div``;
+const Container = styled.div`
+    width: 100%;
+    border: 1px solid black;
+`;
+
+const TechItemsWrap = styled.div`
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    justify-items: center;
+    row-gap: 20px;
+    column-gap: 20px;
+    border: 1px solid black;
+    margin: 0 auto;
+`;

@@ -27,7 +27,8 @@ export default function MainHeader() {
             </MainHeaderLeft>
             <MainHeaderRight>
                 <ThumbnailWrap>
-                    <ThumbnailImage src="/images/thumbnail.jpg" alt="me" layout="fill" objectFit="cover" />
+                    <img src="/images/thumbnail.jpg" alt="" />
+                    {/* <ThumbnailImage src="/images/thumbnail.jpg" alt="me" layout="fill" objectFit="cover" /> */}
                 </ThumbnailWrap>
             </MainHeaderRight>
         </Container>
@@ -58,5 +59,13 @@ const ThumbnailWrap = styled.div`
     height: 350px;
     overflow: hidden;
     border-radius: 100%;
+    img {
+        width: 350px;
+        height: auto;
+    }
 `;
-const ThumbnailImage = styled(Image)``;
+const ThumbnailImage = styled(Image)`
+    width: 350px;
+    height: 350px;
+    /* height: auto; */
+`;

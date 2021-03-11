@@ -39,11 +39,27 @@ const workData = [
 export default function WorkList() {
     return (
         <Container>
-            {workData.map((item) => (
-                <WorkItem name={item.name} />
-            ))}
+            <WorkItemWrap>
+                {workData.map((item, idx) => (
+                    <WorkItem name={item.name} key={idx} />
+                ))}
+            </WorkItemWrap>
         </Container>
     );
 }
 
-const Container = styled.div``;
+const Container = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+`;
+const WorkItemWrap = styled.div`
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: center;
+    row-gap: 20px;
+    column-gap: 20px;
+    border: 1px solid black;
+    margin: 0 auto;
+`;

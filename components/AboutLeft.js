@@ -13,6 +13,8 @@ export default function AboutLeft() {
     );
 }
 
-const Container = styled.div``;
+const Container = styled.div`
+    width: 50%;
+`;
 const Title = styled.h2``;
 const Paragraph = styled.p``;

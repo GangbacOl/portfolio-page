@@ -39,15 +39,22 @@ const Main = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-bottom: 100px;
 `;
 const About = styled.div`
     width: 100%;
     height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 100px;
 `;
 
 const Works = styled.div`
     width: 100%;
+    margin-bottom: 100px;
 `;
 const TechSkill = styled.div`
     width: 100%;
+    margin-bottom: 100px;
 `;
