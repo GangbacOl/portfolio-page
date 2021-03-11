@@ -78,7 +78,6 @@ export default function TechList() {
 
 const Container = styled.div`
     width: 100%;
-    border: 1px solid black;
 `;
 
 const TechItemsWrap = styled.div`
@@ -88,6 +87,5 @@ const TechItemsWrap = styled.div`
     justify-items: center;
     row-gap: 20px;
     column-gap: 20px;
-    border: 1px solid black;
     margin: 0 auto;
 `;
