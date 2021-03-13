@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 
 export default function MainNav() {
+    const moveScroll = (top) => window.scrollTo({ top, left: 0, behavior: 'smooth' });
     return (
         <Container>
             <Navigation>
-                <NavList>About</NavList>
-                <NavList>Works</NavList>
-                <NavList>TechSkill</NavList>
+                <NavList onClick={() => moveScroll(1193)}>About</NavList>
+                <NavList onClick={() => moveScroll(2386)}>Works</NavList>
+                <NavList onClick={() => moveScroll(4854)}>TechSkill</NavList>
             </Navigation>
         </Container>
     );
