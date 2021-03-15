@@ -1,12 +1,14 @@
 import styled from 'styled-components';
-import Image from 'next/image';
 
-export default function WorkItem({ name, description, imagePath }) {
+export default function WorkItem({ name, description, imagePath, notionUrl }) {
     return (
         <Container imagePath={imagePath}>
             <Introduce>
                 <Title>{name}</Title>
                 <Paragraph>{description}</Paragraph>
+                <NotionAnchor href={notionUrl} target="_blank">
+                    자세히 보기
+                </NotionAnchor>
             </Introduce>
         </Container>
     );
@@ -22,11 +24,13 @@ const Container = styled.div`
     background-image: url(${(props) => props.imagePath});
     background-size: cover;
     background-position: center;
+    border-radius: 5px;
     margin: 20px;
     & > div {
         background: none;
         & h2,
-        & p {
+        & p,
+        & a {
             opacity: 0;
         }
     }
@@ -34,7 +38,8 @@ const Container = styled.div`
         & > div {
             background: rgba(0, 0, 0, 0.7);
             & h2,
-            & p {
+            & p,
+            & a {
                 opacity: 1;
             }
         }
@@ -45,10 +50,12 @@ const Container = styled.div`
 `;
 
 const Introduce = styled.div`
+    position: relative;
     width: 100%;
     height: 100%;
     color: white;
     transition: all 0.3s;
+    border-radius: 5px;
     padding: 20px;
 `;
 const Title = styled.h2`
@@ -60,4 +67,13 @@ const Paragraph = styled.p`
     transition: all 0.2s;
     font-size: 0.9rem;
     margin: 0;
+`;
+const NotionAnchor = styled.a`
+    transition: all 0.2s;
+    font-weight: 500;
+    position: absolute;
+    bottom: 20px;
+    &:hover {
+        text-decoration: underline;
+    }
 `;
