@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import MainHeader from '../components/MainHeader';
 import MainNav from '../components/MainNav';
 import MainBottom from '../components/MainBottom';
+import AboutHeader from '../components/AboutHeader';
 import AboutLeft from '../components/AboutLeft';
 import AboutRight from '../components/AboutRight';
 import WorkList from '../components/WorkList';
@@ -11,25 +12,18 @@ import TechList from '../components/TechList';
 import Footer from '../components/Footer';
 
 export default function Home() {
-    const [isMovedScroll, setIsMovedScroll] = useState(false);
+    const [backgroundNumber, setBackgroundNumber] = useState(0);
 
-    const handleClick = () => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-
-    useEffect(() => {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 1192) setIsMovedScroll(true);
-            else setIsMovedScroll(false);
-        });
-    }, []);
+    useEffect(() => setBackgroundNumber(Math.floor(Math.random() * 7) + 1), []);
     return (
         <Container>
-            <ScrollTopImage src="/images/uparrow.png" onClick={handleClick} isMovedScroll={isMovedScroll} />
-            <Main>
+            <Main backgroundNumber={backgroundNumber}>
                 <MainHeader />
                 <MainNav />
                 <MainBottom />
             </Main>
             <About>
+                <AboutHeader />
                 <AboutLeft />
                 <AboutRight />
             </About>
@@ -48,12 +42,27 @@ const Container = styled.div`
     width: 100%;
 `;
 const Main = styled.div`
+    position: relative;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin-bottom: 100px;
+    ${(props) =>
+        props.backgroundNumber === 0
+            ? null
+            : css`
+                  background-image: url('/images/background/background${(props) =>
+                      props.backgroundNumber}.jpg');
+              `}
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    transition: background-image 0.5s;
 `;
 const About = styled.div`
     width: 100%;
@@ -71,19 +80,4 @@ const Works = styled.div`
 const TechSkill = styled.div`
     width: 100%;
     margin-bottom: 100px;
-`;
-const ScrollTopImage = styled.img`
-    width: 40px;
-    height: 40px;
-    position: fixed;
-    top: 100px;
-    right: 50px;
-    opacity: ${(props) => (props.isMovedScroll ? 1 : 0)};
-    border-radius: 100%;
-    border: 2px solid black;
-    padding: 5px;
-    transition: all 0.2s;
-    &:hover {
-        transform: scale(1.1);
-    }
 `;
