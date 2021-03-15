@@ -67,6 +67,7 @@ const AboutLeft = styled.div`
 const AboutImage = styled.img`
     width: 100%;
     border: 7px solid black;
+    border-radius: 15px;
 `;
 const AboutRight = styled.div`
     width: 55%;
