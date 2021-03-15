@@ -5,8 +5,7 @@ import MainHeader from '../components/MainHeader';
 import MainNav from '../components/MainNav';
 import MainBottom from '../components/MainBottom';
 import AboutHeader from '../components/AboutHeader';
-import AboutLeft from '../components/AboutLeft';
-import AboutRight from '../components/AboutRight';
+import AboutBody from '../components/AboutBody';
 import WorkList from '../components/WorkList';
 import TechList from '../components/TechList';
 import Footer from '../components/Footer';
@@ -24,8 +23,7 @@ export default function Home() {
             </Main>
             <About>
                 <AboutHeader />
-                <AboutLeft />
-                <AboutRight />
+                <AboutBody />
             </About>
             <Works>
                 <WorkList />
