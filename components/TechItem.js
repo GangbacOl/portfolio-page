@@ -1,11 +1,10 @@
 import styled from 'styled-components';
 
-export default function TechItem({ name, description, percentage, imagePath }) {
+export default function TechItem({ name, percentage, imagePath }) {
     return (
         <Container>
             <Name>{name}</Name>
             <Logo src={imagePath} alt={imagePath} />
-            <Description>{description}</Description>
             <Progress>
                 <ProgressBar percentage={percentage} />
             </Progress>
@@ -40,10 +39,6 @@ const Logo = styled.img`
     position: absolute;
     right: 20px;
     top: 20px;
-`;
-
-const Description = styled.p`
-    margin: 0 0 10px 0;
 `;
 
 const Progress = styled.div`
