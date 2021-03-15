@@ -2,6 +2,47 @@ import styled from 'styled-components';
 
 import TechItem from './TechItem';
 
+export default function TechList() {
+    return (
+        <Container>
+            <Title>Tech Stack</Title>
+            <TechItemsWrap>
+                {TechSkillData.map((item, idx) => (
+                    <TechItem
+                        name={item.name}
+                        description={item.description}
+                        percentage={item.percentage}
+                        imagePath={item.imagePath}
+                        key={idx}
+                    />
+                ))}
+            </TechItemsWrap>
+        </Container>
+    );
+}
+
+const Container = styled.div`
+    width: 80%;
+    margin: 0 auto;
+`;
+
+const Title = styled.h2`
+    font-size: 2.5rem;
+    font-weight: 500;
+    border-bottom: 2px solid black;
+    padding: 10px 20px;
+`;
+
+const TechItemsWrap = styled.div`
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    justify-items: center;
+    row-gap: 20px;
+    column-gap: 20px;
+    margin: 0 auto;
+`;
+
 const TechSkillData = [
     {
         name: 'JavaScript',
@@ -66,45 +107,32 @@ const TechSkillData = [
         percentage: 70,
         imagePath: '/images/logo/redux.png',
     },
+    {
+        name: 'Sass',
+        description:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut nesciunt non commodi cumque. Cum, ratione modi maiores atque impedit omnis distinctio minus a molestiae, pariatur enim odio ab est animi?',
+        percentage: 65,
+        imagePath: '/images/logo/sass.png',
+    },
+    {
+        name: 'styled-components',
+        description:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut nesciunt non commodi cumque. Cum, ratione modi maiores atque impedit omnis distinctio minus a molestiae, pariatur enim odio ab est animi?',
+        percentage: 80,
+        imagePath: '/images/logo/styled.png',
+    },
+    {
+        name: 'Amazon Web Service',
+        description:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut nesciunt non commodi cumque. Cum, ratione modi maiores atque impedit omnis distinctio minus a molestiae, pariatur enim odio ab est animi?',
+        percentage: 25,
+        imagePath: '/images/logo/aws.png',
+    },
+    {
+        name: 'React Hooks',
+        description:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut nesciunt non commodi cumque. Cum, ratione modi maiores atque impedit omnis distinctio minus a molestiae, pariatur enim odio ab est animi?',
+        percentage: 60,
+        imagePath: '/images/logo/hooks.png',
+    },
 ];
-
-export default function TechList() {
-    return (
-        <Container>
-            <Title>기술 스택</Title>
-            <TechItemsWrap>
-                {TechSkillData.map((item, idx) => (
-                    <TechItem
-                        name={item.name}
-                        description={item.description}
-                        percentage={item.percentage}
-                        imagePath={item.imagePath}
-                        key={idx}
-                    />
-                ))}
-            </TechItemsWrap>
-        </Container>
-    );
-}
-
-const Container = styled.div`
-    width: 90%;
-    margin: 0 auto;
-`;
-
-const Title = styled.h2`
-    font-size: 2.5rem;
-    font-weight: 500;
-    border-bottom: 3px solid black;
-    padding: 10px 20px;
-`;
-
-const TechItemsWrap = styled.div`
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-    justify-items: center;
-    row-gap: 20px;
-    column-gap: 20px;
-    margin: 0 auto;
-`;
