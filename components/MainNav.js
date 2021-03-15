@@ -5,9 +5,9 @@ export default function MainNav() {
     return (
         <Container>
             <Navigation>
-                <NavList onClick={() => moveScroll(1193)}>About</NavList>
-                <NavList onClick={() => moveScroll(2386)}>Works</NavList>
-                <NavList onClick={() => moveScroll(4854)}>TechSkill</NavList>
+                <NavList onClick={() => moveScroll(1084)}>About</NavList>
+                <NavList onClick={() => moveScroll(2277)}>Works</NavList>
+                <NavList onClick={() => moveScroll(4841)}>Tech Stack</NavList>
             </Navigation>
         </Container>
     );
@@ -26,7 +26,16 @@ const Navigation = styled.div`
     align-items: center;
     list-style: none;
     margin: 0 auto;
-    border: 4px solid #333030;
+    border: 4px solid #eee;
+    border-radius: 20px;
+    & li:first-child {
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+    }
+    & li:last-child {
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
 `;
 const NavList = styled.li`
     width: 100%;
@@ -36,8 +45,9 @@ const NavList = styled.li`
     align-items: center;
     transition: all 0.3s;
     font-weight: bold;
+    color: #eee;
     &:hover {
-        background-color: #333030;
-        color: white;
+        background-color: #eee;
+        color: #000;
     }
 `;
