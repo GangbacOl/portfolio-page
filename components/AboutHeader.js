@@ -16,6 +16,7 @@ const Container = styled.div`
 const Title = styled.h2`
     font-size: 2.5rem;
     font-weight: 500;
+    padding: 0px 20px 10px 20px;
     border-bottom: 2px solid black;
-    padding: 10px 20px;
+    margin-top: 0;
 `;
