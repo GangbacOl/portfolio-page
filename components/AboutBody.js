@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import Image from 'next/image';
 
+import * as mixin from '../styles/mixin';
+
 export default function AboutBody() {
     return (
         <Container>
@@ -31,24 +33,28 @@ export default function AboutBody() {
                         </SocialSpan>
                     </SocialLink>
                 </SocialWrap>
-                <Title>Education</Title>
-                <SubtitleWrap>
-                    <ProfileImage src="/images/sunrin.png" width={35} height={35} />
-                    <Subtitle>선린인터넷고등학교</Subtitle>
-                </SubtitleWrap>
-                <Paragraph>
-                    선린인터넷고등학교 정보보호과에 재학중입니다. 운영체제, 네트워크, 데이터베이스, 자료구조
-                    등의 교과목을 이수했습니다.
-                </Paragraph>
-                <Title>Activities</Title>
-                <SubtitleWrap>
-                    <ProfileImage src="/images/unifox.png" width={35} height={35} />
-                    <Subtitle>Unifox(유니폭스)</Subtitle>
-                </SubtitleWrap>
-                <Paragraph>
-                    정보보호과 프로그래밍 전문동아리 Unifox의 부장을 맡아 1년동안 후배들을 지도하고 부원들을
-                    인솔했습니다.
-                </Paragraph>
+                <Career>
+                    <Title>Education</Title>
+                    <SubtitleWrap>
+                        <ProfileImage src="/images/sunrin.png" width={35} height={35} />
+                        <Subtitle>선린인터넷고등학교</Subtitle>
+                    </SubtitleWrap>
+                    <Paragraph>
+                        선린인터넷고등학교 정보보호과에 재학중입니다. 운영체제, 네트워크, 데이터베이스,
+                        자료구조 등의 교과목을 이수했습니다.
+                    </Paragraph>
+                </Career>
+                <Career>
+                    <Title>Activities</Title>
+                    <SubtitleWrap>
+                        <ProfileImage src="/images/unifox.png" width={35} height={35} />
+                        <Subtitle>Unifox(유니폭스)</Subtitle>
+                    </SubtitleWrap>
+                    <Paragraph>
+                        정보보호과 프로그래밍 전문동아리 Unifox의 부장을 맡아 1년동안 후배들을 지도하고
+                        부원들을 인솔했습니다.
+                    </Paragraph>
+                </Career>
             </AboutRight>
         </Container>
     );
@@ -60,9 +66,15 @@ const Container = styled.div`
     display: flex;
     justify-content: space-between;
     height: auto;
+    ${mixin.mobileTablet(`
+        flex-direction: column;
+    `)}
 `;
 const AboutLeft = styled.div`
     width: 45%;
+    ${mixin.mobileTablet(`
+        width: 100%;
+    `)}
 `;
 const AboutImage = styled.img`
     width: 100%;
@@ -72,18 +84,24 @@ const AboutImage = styled.img`
 const AboutRight = styled.div`
     width: 55%;
     margin-left: 20px;
+    ${mixin.mobileTablet(`
+        width: 95%;
+        margin: 0 auto;
+    `)}
 `;
 const Name = styled.h2`
     font-size: 2.5rem;
     font-weight: 500;
     margin: 5px 0 15px 0;
+    ${mixin.mobileTablet(`
+        font-size: 2rem;
+    `)}
 `;
 const SocialWrap = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    text-align: center;
-    margin: 0 0 30px 0;
+    margin: 0 0 15px 0;
 `;
 const SocialLink = styled.div`
     display: flex;
@@ -96,6 +114,12 @@ const SocialSpan = styled.a`
     &:hover {
         text-decoration: underline;
     }
+    ${mixin.tablet(`
+        font-size: 1.3rem;
+    `)}
+`;
+const Career = styled.div`
+    margin: 5px 0;
 `;
 const Title = styled.h2`
     font-size: 1.5rem;
@@ -114,5 +138,8 @@ const Subtitle = styled.h2`
 const Paragraph = styled.p`
     font-size: 1rem;
     margin: 0;
+    ${mixin.tablet(`
+        font-size: 1.3rem;
+    `)}
 `;
 const ProfileImage = styled(Image)``;

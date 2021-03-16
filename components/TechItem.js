@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { mobile } from '../styles/mixin';
+
 export default function TechItem({ name, percentage, imagePath }) {
     return (
         <Container>
@@ -25,10 +27,14 @@ const Container = styled.div`
         -moz-box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.35);
         box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.35);
     }
+    ${mobile(`
+        width: 100%;
+        max-width: none;
+    `)}
 `;
 
 const Name = styled.h2`
-    margin: 0 0 10px 0;
+    margin: 0 0 15px 0;
     display: flex;
     align-items: center;
 `;
@@ -44,11 +50,11 @@ const Logo = styled.img`
 const Progress = styled.div`
     width: 100%;
     border: 2px solid black;
-    height: 10px;
+    height: 15px;
 `;
 
 const ProgressBar = styled.div`
     width: ${(props) => props.percentage}%;
-    height: 6px;
+    height: 11px;
     background: #000;
 `;

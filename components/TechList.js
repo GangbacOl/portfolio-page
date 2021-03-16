@@ -2,6 +2,8 @@ import styled from 'styled-components';
 
 import TechItem from './TechItem';
 
+import { mobile } from '../styles/mixin';
+
 export default function TechList() {
     return (
         <Container>
@@ -28,8 +30,9 @@ const Container = styled.div`
 const Title = styled.h2`
     font-size: 2.5rem;
     font-weight: 500;
+    padding: 0px 20px 10px 20px;
     border-bottom: 2px solid black;
-    padding: 10px 20px;
+    margin-top: 0;
 `;
 
 const TechItemsWrap = styled.div`
@@ -40,6 +43,9 @@ const TechItemsWrap = styled.div`
     row-gap: 20px;
     column-gap: 20px;
     margin: 0 auto;
+    ${mobile(`
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    `)}
 `;
 
 const TechSkillData = [

@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { mobile } from '../styles/mixin';
+
 export default function MainHeader() {
     return (
         <Container>
@@ -46,16 +48,22 @@ const Subtitle = styled.p`
 
 const MainHeaderTop = styled.div``;
 const ThumbnailWrap = styled.div`
-    position: relative;
     width: 360px;
     height: 360px;
     overflow: hidden;
     border-radius: 100%;
     border: 7px solid #000;
+    ${mobile(`
+        width: 200px;
+        height: 200px;
+    `)}
 `;
 const ThumbnailImage = styled.img`
     position: relative;
     top: -7px;
     left: -7px;
     width: 360px;
+    ${mobile(`
+        width: 200px;
+    `)}
 `;

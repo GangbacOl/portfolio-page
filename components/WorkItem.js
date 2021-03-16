@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import * as mixin from '../styles/mixin';
+
 export default function WorkItem({ name, description, imagePath, notionUrl }) {
     return (
         <Container imagePath={imagePath}>
@@ -47,6 +49,10 @@ const Container = styled.div`
         -moz-box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.75);
         box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.75);
     }
+    ${mixin.mobile(`
+        width: 200px;
+        height: 200px;
+    `)}
 `;
 
 const Introduce = styled.div`
@@ -57,16 +63,25 @@ const Introduce = styled.div`
     transition: all 0.3s;
     border-radius: 5px;
     padding: 20px;
+    ${mixin.tablet(`
+        padding: 25px;
+    `)}
 `;
 const Title = styled.h2`
     transition: all 0.2s;
     font-size: 1.2rem;
     margin: 10px 0 20px 0;
+    ${mixin.tablet(`
+        font-size: 1.7rem;
+    `)}
 `;
 const Paragraph = styled.p`
     transition: all 0.2s;
     font-size: 0.9rem;
     margin: 0;
+    ${mixin.tablet(`
+        font-size: 1.3rem;
+    `)}
 `;
 const NotionAnchor = styled.a`
     transition: all 0.2s;
@@ -76,4 +91,7 @@ const NotionAnchor = styled.a`
     &:hover {
         text-decoration: underline;
     }
+    ${mixin.tablet(`
+        font-size: 1.3rem;
+    `)}
 `;
