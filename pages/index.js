@@ -1,9 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import styled, { css } from 'styled-components';
 
 import MainHeader from '../components/MainHeader';
 import MainNav from '../components/MainNav';
-import MainBottom from '../components/MainBottom';
 import AboutHeader from '../components/AboutHeader';
 import AboutBody from '../components/AboutBody';
 import WorkList from '../components/WorkList';
@@ -11,24 +10,27 @@ import TechList from '../components/TechList';
 import Footer from '../components/Footer';
 
 export default function Home() {
-    const [backgroundNumber, setBackgroundNumber] = useState(0);
+    const [backgroundNumber, setBackgroundNumber] = useState(1);
+    const about = useRef(null);
+    const works = useRef(null);
+    const tech = useRef(null);
 
     useEffect(() => setBackgroundNumber(Math.floor(Math.random() * 7) + 1), []);
     return (
         <Container>
-            <Main backgroundNumber={backgroundNumber}>
+            <Main>
+                <MainBg backgroundNumber={backgroundNumber} />
                 <MainHeader />
-                <MainNav />
-                <MainBottom />
+                <MainNav about={about} works={works} tech={tech} />
             </Main>
-            <About>
+            <About ref={about}>
                 <AboutHeader />
                 <AboutBody />
             </About>
-            <Works>
+            <Works ref={works}>
                 <WorkList />
             </Works>
-            <TechSkill>
+            <TechSkill ref={tech}>
                 <TechList />
             </TechSkill>
             <Footer />
@@ -40,13 +42,16 @@ const Container = styled.div`
     width: 100%;
 `;
 const Main = styled.div`
-    position: relative;
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin-bottom: 100px;
+`;
+const MainBg = styled.div`
+    width: 100%;
+    height: 100vh;
     ${(props) =>
         props.backgroundNumber === 0
             ? null
@@ -57,26 +62,34 @@ const Main = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
+    position: fixed;
+    z-index: -10;
     transition: background-image 0.5s;
 `;
 const About = styled.div`
-    width: 100%;
-    height: 100vh;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: 100px;
+    padding: 30px 0;
+    background: #fff;
 `;
 
 const Works = styled.div`
-    width: 100%;
-    margin-bottom: 100px;
+    width: 90%;
+    padding: 30px 0;
+    border-radius: 20px;
+    margin: 0 auto 100px auto;
+    background: #fff;
 `;
 const TechSkill = styled.div`
-    width: 100%;
-    margin-bottom: 100px;
+    width: 90%;
+    padding: 30px 0;
+    border-radius: 20px;
+    margin: 0 auto 100px auto;
+    background: #fff;
 `;
