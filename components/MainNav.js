@@ -1,13 +1,15 @@
 import styled from 'styled-components';
 
-export default function MainNav() {
-    const moveScroll = (top) => window.scrollTo({ top, left: 0, behavior: 'smooth' });
+export default function MainNav({ about, works, tech }) {
+    const handleScroll = (element) => {
+        if (element) window.scrollTo({ top: element.current.offsetTop, left: 0, behavior: 'smooth' });
+    };
     return (
         <Container>
             <Navigation>
-                <NavList onClick={() => moveScroll(1084)}>About</NavList>
-                <NavList onClick={() => moveScroll(2277)}>Works</NavList>
-                <NavList onClick={() => moveScroll(4841)}>Tech Stack</NavList>
+                <NavList onClick={() => handleScroll(about)}>About</NavList>
+                <NavList onClick={() => handleScroll(works)}>Works</NavList>
+                <NavList onClick={() => handleScroll(tech)}>Tech Stack</NavList>
             </Navigation>
         </Container>
     );
@@ -15,7 +17,7 @@ export default function MainNav() {
 
 const Container = styled.div`
     width: 100%;
-    margin: 30px 0;
+    margin: 0 0 100px 0;
 `;
 const Navigation = styled.div`
     width: 60%;
