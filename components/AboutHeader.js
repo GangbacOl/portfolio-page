@@ -10,7 +10,7 @@ export default function AboutRight() {
 
 const Container = styled.div`
     position: relative;
-    width: 80%;
+    width: 95%;
     height: auto;
 `;
 const Title = styled.h2`

@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import * as mixin from '../styles/mixin';
+
 export default function MainNav({ about, works, tech }) {
     const handleScroll = (element) => {
         if (element) window.scrollTo({ top: element.current.offsetTop, left: 0, behavior: 'smooth' });
@@ -17,7 +19,10 @@ export default function MainNav({ about, works, tech }) {
 
 const Container = styled.div`
     width: 100%;
-    margin: 0 0 100px 0;
+    margin: 200px 0 100px 0;
+    ${mixin.mobileTablet(`
+        margin: 0 0 200px 0;
+    `)}
 `;
 const Navigation = styled.div`
     width: 60%;

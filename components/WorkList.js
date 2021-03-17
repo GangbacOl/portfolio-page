@@ -31,10 +31,11 @@ export default function WorkList() {
 }
 
 const Container = styled.div`
-    width: 100%;
+    width: 95%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0 auto;
 `;
 
 const WorkItemListsWrap = styled.div`
@@ -51,6 +52,7 @@ const WorkItemListsWrap = styled.div`
 
 const WorkItemListWrap = styled.div`
     width: 75%;
+    width: 100%;
 `;
 
 const WorkItemList = styled.div`
@@ -66,7 +68,7 @@ const WorkItemList = styled.div`
 `;
 
 const Title = styled.h2`
-    width: 80%;
+    width: 100%;
     font-size: 2.5rem;
     font-weight: 500;
     padding: 0 20px 10px 20px;

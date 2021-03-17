@@ -46,7 +46,7 @@ const Main = styled.div`
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-bottom: 100px;
 `;
 const MainBg = styled.div`
@@ -67,7 +67,8 @@ const MainBg = styled.div`
     transition: background-image 0.5s;
 `;
 const About = styled.div`
-    width: 90%;
+    position: relative;
+    width: 80%;
     margin: 0 auto;
     border-radius: 20px;
     display: flex;
@@ -80,14 +81,14 @@ const About = styled.div`
 `;
 
 const Works = styled.div`
-    width: 90%;
+    width: 80%;
     padding: 30px 0;
     border-radius: 20px;
     margin: 0 auto 100px auto;
     background: #fff;
 `;
 const TechSkill = styled.div`
-    width: 90%;
+    width: 80%;
     padding: 30px 0;
     border-radius: 20px;
     margin: 0 auto 100px auto;

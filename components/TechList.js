@@ -23,7 +23,7 @@ export default function TechList() {
 }
 
 const Container = styled.div`
-    width: 80%;
+    width: 95%;
     margin: 0 auto;
 `;
 
