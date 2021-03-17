@@ -1,5 +1,5 @@
 const breakpointMobile = 425;
-const breakpointTablet = 768;
+const breakpointTablet = 1024;
 
 export const mobileTablet = (content) =>
     `@media only screen and (max-width:${breakpointTablet}px){
