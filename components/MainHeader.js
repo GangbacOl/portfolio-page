@@ -27,6 +27,28 @@ const Container = styled.div`
     align-items: center;
     margin: 60px auto 0 auto;
 `;
+const MainHeaderTop = styled.div``;
+const ThumbnailWrap = styled.div`
+    width: 360px;
+    height: 360px;
+    overflow: hidden;
+    border-radius: 100%;
+    border: 7px solid #000;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+    ${mobile(`
+        width: 200px;
+        height: 200px;
+    `)}
+`;
+const ThumbnailImage = styled.img`
+    position: relative;
+    top: -7px;
+    left: -7px;
+    width: 360px;
+    ${mobile(`
+        width: 200px;
+    `)}
+`;
 const MainHeaderBottom = styled.div`
     display: flex;
     flex-direction: column;
@@ -44,26 +66,4 @@ const Subtitle = styled.p`
     font-size: 1.6rem;
     font-weight: 500;
     margin: 0;
-`;
-
-const MainHeaderTop = styled.div``;
-const ThumbnailWrap = styled.div`
-    width: 360px;
-    height: 360px;
-    overflow: hidden;
-    border-radius: 100%;
-    border: 7px solid #000;
-    ${mobile(`
-        width: 200px;
-        height: 200px;
-    `)}
-`;
-const ThumbnailImage = styled.img`
-    position: relative;
-    top: -7px;
-    left: -7px;
-    width: 360px;
-    ${mobile(`
-        width: 200px;
-    `)}
 `;
