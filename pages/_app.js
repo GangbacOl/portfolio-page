@@ -1,10 +1,10 @@
 import { GlobalStyle } from '../styles/globalStyle';
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
 
-function MyApp({ Component, pageProps }) {
+export default function MyApp({ Component, pageProps }) {
     return (
         <>
-            <Helmet>
+            <Head>
                 <meta charSet="utf-8" />
                 <meta property="og:title" content="GangbacOl 포트폴리오 페이지" />
                 <meta
@@ -24,11 +24,9 @@ function MyApp({ Component, pageProps }) {
                 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png" />
                 <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png" />
                 <link rel="manifest" href="/site.webmanifest" />
-            </Helmet>
+            </Head>
             <GlobalStyle />
             <Component {...pageProps} />
         </>
     );
 }
-
-export default MyApp;
