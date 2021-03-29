@@ -22,14 +22,14 @@ export default function AboutBody() {
                     </SocialLink>
                     <SocialLink>
                         <SocialImage src="/images/github.png" alt="github logo" width={30} height={30} />
-                        <SocialSpan href="https://github.com/GangbacOl">
-                            https://github.com/GangbacOl
+                        <SocialSpan href="https://www.github.com/GangbacOl">
+                            https://www.github.com/GangbacOl
                         </SocialSpan>
                     </SocialLink>
                     <SocialLink>
                         <SocialImage src="/images/facebook.png" alt="facebook logo" width={30} height={30} />
-                        <SocialSpan href="https://www.facebook.com/profile.php?id=100014959867589">
-                            https://www.facebook.com/profile.php?id=100014959867589
+                        <SocialSpan href="https://www.facebook.com/GangbacOl">
+                            https://www.facebook.com/GangbacOl
                         </SocialSpan>
                     </SocialLink>
                 </SocialWrap>
