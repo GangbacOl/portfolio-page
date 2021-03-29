@@ -37,7 +37,9 @@ export default function AboutBody() {
                     <Title>Education</Title>
                     <SubtitleWrap>
                         <ProfileImage src="/images/sunrin.png" width={35} height={35} />
-                        <Subtitle>선린인터넷고등학교</Subtitle>
+                        <Subtitle>
+                            <SocialSpan href="http://sunrint.hs.kr/index.do">선린인터넷고등학교</SocialSpan>
+                        </Subtitle>
                     </SubtitleWrap>
                     <Paragraph>
                         선린인터넷고등학교 정보보호과에 재학중입니다. 운영체제, 네트워크, 데이터베이스,
@@ -48,7 +50,11 @@ export default function AboutBody() {
                     <Title>Activities</Title>
                     <SubtitleWrap>
                         <ProfileImage src="/images/unifox.png" width={35} height={35} />
-                        <Subtitle>Unifox(유니폭스)</Subtitle>
+                        <Subtitle>
+                            <SocialSpan href="https://www.facebook.com/UnifoxToTheWorld">
+                                Unifox(유니폭스)
+                            </SocialSpan>
+                        </Subtitle>
                     </SubtitleWrap>
                     <Paragraph>
                         정보보호과 프로그래밍 전문동아리 Unifox의 부장을 맡아 1년동안 후배들을 지도하고
@@ -133,7 +139,7 @@ const SubtitleWrap = styled.div`
 const Subtitle = styled.h2`
     font-size: 1.2rem;
     font-weight: 500;
-    margin: 0 0 0 10px;
+    margin: 0;
 `;
 const Paragraph = styled.p`
     font-size: 1rem;
