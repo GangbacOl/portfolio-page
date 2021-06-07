@@ -138,7 +138,7 @@ const WorkData = {
             description:
                 '모교 멀티미디어과에서 진행하는 졸업전시회를 온라인상에서 진행하기 위해 웹페이지를 개발하였습니다.',
             imagePath: '/images/conte.png',
-            notionUrl: 'https://www.notion.so/STA-C-TranSign-573b0b387369467c900d9a0132aed3a7',
+            notionUrl: 'https://www.notion.so/29eb8575cc574f41aaf994cd6e5df8e3',
         },
         {
             name: 'Merging Point',
