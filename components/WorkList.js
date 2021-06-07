@@ -137,7 +137,7 @@ const WorkData = {
             name: '멀티미디어과 졸업전시회 페이지',
             description:
                 '모교 멀티미디어과에서 진행하는 졸업전시회를 온라인상에서 진행하기 위해 웹페이지를 개발하였습니다.',
-            imagePath: '/images/transign.png',
+            imagePath: '/images/conte.png',
             notionUrl: 'https://www.notion.so/STA-C-TranSign-573b0b387369467c900d9a0132aed3a7',
         },
         {
