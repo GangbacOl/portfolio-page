@@ -111,10 +111,17 @@ const WorkData = {
             imagePath: '/images/portfoliopage.png',
             notionUrl: 'https://www.notion.so/97184c97e8e94d38a72de89a32538346',
         },
+        {
+            name: 'GangbacOl Blog',
+            description:
+                '개인적으로 공부한 내용들을 정리하여 온라인상에 게시해놓기 위해 블로그를 개발하였습니다',
+            imagePath: '/images/blog.png',
+            notionUrl: 'https://www.notion.so/GangbacOl-Blog-68b2df53cffb4765a59ae454abda697c',
+        },
     ],
     Team: [
         {
-            name: '정보과 홍보 페이지',
+            name: '정보보호과 홍보 페이지',
             description:
                 '모교 정보보호과의 실적, 프로젝트들을 게시할 수 있는 홍보 목적으로 만든 사이트입니다. ',
             imagePath: '/images/sunrinsecurity.png',
@@ -125,6 +132,19 @@ const WorkData = {
             description: '인공지능 모델을 개발하여 수어를 글로 글을 수어로 번역해주는 플랫폼입니다.',
             imagePath: '/images/transign.png',
             notionUrl: 'https://www.notion.so/STA-C-TranSign-573b0b387369467c900d9a0132aed3a7',
+        },
+        {
+            name: '멀티미디어과 졸업전시회 페이지',
+            description:
+                '모교 멀티미디어과에서 진행하는 졸업전시회를 온라인상에서 진행하기 위해 웹페이지를 개발하였습니다.',
+            imagePath: '/images/transign.png',
+            notionUrl: 'https://www.notion.so/STA-C-TranSign-573b0b387369467c900d9a0132aed3a7',
+        },
+        {
+            name: 'Merging Point',
+            description: '장애인들을 위한 주차 도우미 서비스를 앱으로 제작하였습니다.',
+            imagePath: '/images/merging.png',
+            notionUrl: 'https://www.notion.so/Merging-Point-b9aa3477590e4aa6943919a22d5c7bd7',
         },
     ],
     Competition: [
