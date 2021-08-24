@@ -3,7 +3,7 @@ import styled from "styled-components";
 import WorkItem from "./WorkItem";
 
 import * as mixin from "../styles/mixin";
-import workData from "../data/workData";
+import workData from "../public/data/workData";
 
 export default function WorkList() {
   return (
