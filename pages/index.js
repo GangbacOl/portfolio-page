@@ -107,7 +107,7 @@ const TechSkill = styled.div`
   background: #fff;
 `;
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const backgroundNumber = Math.floor(Math.random() * 7) + 1;
   return { props: { backgroundNumber } };
 }
